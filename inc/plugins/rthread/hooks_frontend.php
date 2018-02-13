@@ -15,7 +15,7 @@ function misc_start()
 
     if($mybb->input['action'] == 'rthread')
     {
-        $mybb->get_input('fid', MyBB::INPUT_INT);
+        $mybb->get_input('fid', \MyBB::INPUT_INT);
 
         $rthread_forums = \rthread\getCsvSettingValues('rthread_forums');
 
