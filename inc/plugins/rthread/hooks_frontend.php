@@ -11,11 +11,11 @@ function global_start()
 
 function misc_start()
 {
-    global $mybb, $lang;
+    global $mybb, $db, $lang;
 
     if($mybb->input['action'] == 'rthread')
     {
-        $mybb->get_input('fid', \MyBB::INPUT_INT);
+        $fid = $mybb->get_input('fid', \MyBB::INPUT_INT);
 
         $rthread_forums = \rthread\getCsvSettingValues('rthread_forums');
 
