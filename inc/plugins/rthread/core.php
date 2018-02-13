@@ -1,5 +1,7 @@
 <?php
 
+namespace rthread;
+
 function addHooks(array $hooks, string $namespace = null)
 {
     global $plugins;
