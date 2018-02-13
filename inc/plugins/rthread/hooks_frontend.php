@@ -13,7 +13,7 @@ function misc_start()
 {
     global $mybb, $lang;
 
-    elseif($mybb->input['action'] == 'rthread')
+    if($mybb->input['action'] == 'rthread')
     {
         $mybb->get_input('fid', MyBB::INPUT_INT);
 
