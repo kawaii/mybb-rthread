@@ -2,7 +2,7 @@
 Very simple MyBB plugin to select a random thread in a forum from the last X days.
 
 ### Dependencies
-- PHP >= 7.0
+- PHP >= 7.2
 - https://github.com/frostschutz/MyBB-PluginLibrary
 
 ### Widgets
