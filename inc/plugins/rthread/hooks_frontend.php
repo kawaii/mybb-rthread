@@ -13,6 +13,8 @@ function misc_start()
 {
     global $mybb, $db, $lang;
 
+    $lang->load('rthread');
+
     if($mybb->input['action'] == 'rthread')
     {
         $fid = $mybb->get_input('fid', \MyBB::INPUT_INT);
@@ -44,7 +46,9 @@ function misc_start()
 
 function forumdisplay_end()
 {
-    global $mybb, $lang;
+    global $mybb, $lang, $rthread_button;
+
+    $lang->load('rthread');
 
     $rthread_forums = \rthread\getCsvSettingValues('rthread_forums');
 
