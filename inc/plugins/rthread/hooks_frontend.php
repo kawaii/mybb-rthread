@@ -26,16 +26,17 @@ function misc_start()
             error_no_permission();
         }
 
+        $rthread_discriminator = \rthread\getSettingValue('rthread_discriminator');
         $rthread_days = \rthread\getSettingValue('rthread_days') * 86400;
 
         switch($db->type)
         {
             case "mysqli":
             case "sqlite":
-               $query = $db->query("SELECT tid FROM " . TABLE_PREFIX . "threads WHERE fid={$fid} AND visible=1 AND dateline > {$rthread_days} ORDER BY RAND() LIMIT 1;");
+               $query = $db->query("SELECT tid FROM " . TABLE_PREFIX . "threads WHERE fid={$fid} AND visible=1 AND {$rthread_discriminator} > {$rthread_days} ORDER BY RAND() LIMIT 1;");
                break;
             case "pgsql":
-               $query = $db->query("SELECT tid FROM " . TABLE_PREFIX . "threads WHERE fid={$fid} AND visible=1 AND dateline > {$rthread_days} ORDER BY RANDOM() LIMIT 1;");
+               $query = $db->query("SELECT tid FROM " . TABLE_PREFIX . "threads WHERE fid={$fid} AND visible=1 AND {$rthread_discriminator} > {$rthread_days} ORDER BY RANDOM() LIMIT 1;");
                break;
         }
 

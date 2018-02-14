@@ -39,7 +39,14 @@ function rthread_install()
             'optionscode' => 'numeric',
             'value'       => '30',
         ],
-
+        'rthread_discriminator' => [
+            'title'       => 'RThread Discriminator',
+            'description' => 'Select between dateline or lastpost random selection discrimination.',
+            'optionscode' => 'select
+dateline=dateline
+lastpost=lastpost',
+            'value'       => 'dateline',
+        ],
     ];
 
     $PL->settings(
