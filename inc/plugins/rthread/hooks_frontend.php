@@ -54,11 +54,13 @@ function misc_start()
     }
 }
 
-function forumdisplay_end()
+function forumdisplay_start()
 {
     global $mybb, $lang, $rthread_button;
 
     $lang->load('rthread');
+
+    $fid = $mybb->get_input('fid', \MyBB::INPUT_INT);
 
     $rthread_forums = \rthread\getCsvSettingValues('rthread_forums');
 
