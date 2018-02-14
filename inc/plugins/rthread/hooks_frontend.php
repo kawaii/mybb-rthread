@@ -28,8 +28,6 @@ function misc_start()
 
         $rthread_days = \rthread\getSettingValue('rthread_days') * 86400;
 
-        $rthread = '';
-
         switch($db->type)
         {
             case "mysqli":
