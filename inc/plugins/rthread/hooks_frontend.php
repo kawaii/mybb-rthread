@@ -30,7 +30,7 @@ function misc_start()
 
         $rthread = '';
 
-        $query = $db->query("SELECT tid FROM " . TABLE_PREFIX . "threads WHERE fid={$fid} AND dateline > {$rthread_days} ORDER BY RAND() LIMIT 1;");
+        $query = $db->query("SELECT tid FROM " . TABLE_PREFIX . "threads WHERE fid={$fid} AND visible=1 AND dateline > {$rthread_days} ORDER BY RAND() LIMIT 1;");
         $tid = $db->fetch_field($query, 'tid');
 
         if($tid > 0)
