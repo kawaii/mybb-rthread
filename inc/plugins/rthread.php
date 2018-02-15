@@ -18,6 +18,7 @@ function rthread_info()
         'author'        => 'Kane \'kawaii\' Valentine',
         'authorsite'    => 'https://cute.im/',
         'version'       => '1.0',
+        'codename'      => 'rthread',
         'compatibility' => '18*',
     ];
 }
